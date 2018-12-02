@@ -25,7 +25,6 @@ class SignUpViewController: UIViewController {
     
    
     @IBAction func regButon(_ sender: Any) {
-        print ("in");
         if reg_password.text != reg_confirmPassword.text {
             
             let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
@@ -40,8 +39,7 @@ class SignUpViewController: UIViewController {
              Auth.auth().createUser(withEmail: reg_email.text!, password: reg_password.text!){ (user, error) in
                 
                 if error == nil {
-//                    let alertController = UIAlertController(title: "Congratulation", message: "Thanks for register", preferredStyle: .alert)
-//                    let defaultAction = UIAlertAction (title: "Let's Start", style: .cancel)
+
                 self.performSegue(withIdentifier: "login", sender: self)
                     
                 }else{
@@ -70,14 +68,6 @@ class SignUpViewController: UIViewController {
     
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 

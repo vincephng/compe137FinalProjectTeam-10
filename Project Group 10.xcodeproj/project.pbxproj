@@ -11,9 +11,12 @@
 		FA051F8B2153F0BE00DA91E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA051F8A2153F0BE00DA91E8 /* AppDelegate.swift */; };
 		FA051F8D2153F0BE00DA91E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA051F8C2153F0BE00DA91E8 /* ViewController.swift */; };
 		FA051F902153F0BE00DA91E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA051F8E2153F0BE00DA91E8 /* Main.storyboard */; };
-		FA051F922153F0C000DA91E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA051F912153F0C000DA91E8 /* Assets.xcassets */; };
 		FA051F952153F0C000DA91E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA051F932153F0C000DA91E8 /* LaunchScreen.storyboard */; };
 		FA051F9F2153F10900DA91E8 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA051F9E2153F10900DA91E8 /* CloudKit.framework */; };
+		FA33CBCA21ADA361002621DA /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA33CBC921ADA361002621DA /* Photos.swift */; };
+		FA714F6521A606F600AD9CE7 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714F6421A606F600AD9CE7 /* UploadViewController.swift */; };
+		FA72D1492198FF0C0024F6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA051F912153F0C000DA91E8 /* Assets.xcassets */; };
+		FA72D14B219E88560024F6EF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72D14A219E88560024F6EF /* AccountViewController.swift */; };
 		FA82DBFF217CEA4400AB5ED7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA82DBFE217CEA4400AB5ED7 /* GoogleService-Info.plist */; };
 		FA993CEE2181314C001A78D7 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA993CED2181314C001A78D7 /* MainPageViewController.swift */; };
 		FAD0CC53217FDB0F0080AED0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0CC52217FDB0F0080AED0 /* SignUpViewController.swift */; };
@@ -32,6 +35,9 @@
 		FA051F962153F0C000DA91E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA051F9C2153F0FE00DA91E8 /* Project Group 10.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Project Group 10.entitlements"; sourceTree = "<group>"; };
 		FA051F9E2153F10900DA91E8 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FA33CBC921ADA361002621DA /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		FA714F6421A606F600AD9CE7 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		FA72D14A219E88560024F6EF /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		FA82DBFE217CEA4400AB5ED7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA993CED2181314C001A78D7 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		FAD0CC52217FDB0F0080AED0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 		FA051F7E2153F0BE00DA91E8 = {
 			isa = PBXGroup;
 			children = (
+				FA33CBC821ADA34C002621DA /* Model */,
 				FA051F892153F0BE00DA91E8 /* Project Group 10 */,
 				FA051F882153F0BE00DA91E8 /* Products */,
 				FA051F9D2153F10900DA91E8 /* Frameworks */,
@@ -85,6 +92,8 @@
 				FA051F8C2153F0BE00DA91E8 /* ViewController.swift */,
 				FAD0CC52217FDB0F0080AED0 /* SignUpViewController.swift */,
 				FA993CED2181314C001A78D7 /* MainPageViewController.swift */,
+				FA72D14A219E88560024F6EF /* AccountViewController.swift */,
+				FA714F6421A606F600AD9CE7 /* UploadViewController.swift */,
 				FA051F8E2153F0BE00DA91E8 /* Main.storyboard */,
 				FA051F912153F0C000DA91E8 /* Assets.xcassets */,
 				FA051F932153F0C000DA91E8 /* LaunchScreen.storyboard */,
@@ -101,6 +110,14 @@
 				E2588748C6A3F424151D77F3 /* libPods-Project Group 10.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA33CBC821ADA34C002621DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA33CBC921ADA361002621DA /* Photos.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +189,7 @@
 			files = (
 				FA051F952153F0C000DA91E8 /* LaunchScreen.storyboard in Resources */,
 				FA82DBFF217CEA4400AB5ED7 /* GoogleService-Info.plist in Resources */,
-				FA051F922153F0C000DA91E8 /* Assets.xcassets in Resources */,
+				FA72D1492198FF0C0024F6EF /* Assets.xcassets in Resources */,
 				FA051F902153F0BE00DA91E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,9 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA993CEE2181314C001A78D7 /* MainPageViewController.swift in Sources */,
+				FA714F6521A606F600AD9CE7 /* UploadViewController.swift in Sources */,
+				FA72D14B219E88560024F6EF /* AccountViewController.swift in Sources */,
 				FAD0CC53217FDB0F0080AED0 /* SignUpViewController.swift in Sources */,
 				FA051F8D2153F0BE00DA91E8 /* ViewController.swift in Sources */,
 				FA051F8B2153F0BE00DA91E8 /* AppDelegate.swift in Sources */,
+				FA33CBCA21ADA361002621DA /* Photos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

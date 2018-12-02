@@ -10,42 +10,31 @@ import UIKit
 import Firebase
 
 class MainPageViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        
-        
-    }
-    
    
+
     
     @IBAction func logoutButton(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-        }
-        catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
+//        do {
+//            try Auth.auth().signOut()
+//        }
+//        catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
         
-        let storyboard = UIStoryboard(name: "MainPage", bundle: nil)
-        let initial = storyboard.instantiateInitialViewController()
-        UIApplication.shared.keyWindow?.rootViewController = initial
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let initial = storyboard.instantiateInitialViewController()
+      
+          self.performSegue(withIdentifier: "logout", sender: self)
+        
     }
-    
-    
-    
-    
-   
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var foodLabel: UILabel!
+    @IBOutlet weak var foodImage: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        
     }
-    */
-
 }
